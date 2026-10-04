@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Willison Coding Class - Learn Web & Trading</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;font-family:Arial;background:#f4f6ff}
+header{background:linear-gradient(90deg,#003366,#0066ff);color:white;padding:30px;text-align:center}
+.card{max-width:750px;margin:20px auto;background:white;padding:22px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.1)}
+.price{background:#e8f5e9;border:2px solid #2e7d32;padding:18px;border-radius:12px;text-align:center}
+.mpesa{background:#e3f2fd;border:2px solid #1565c0;padding:18px;border-radius:12px}
+.btn{display:block;background:#25D366;color:white;padding:14px;text-align:center;border-radius:30px;text-decoration:none;font-weight:bold;margin-top:12px}
+.btn2{background:#003366}
+input,textarea{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #ccc;box-sizing:border-box}
+</style>
+</head>
+<body>
+<header>
+<h1>💻 Willison Coding Class</h1>
+<p>Learn HTML, CSS, GitHub Website + Trading Basics - From Zero</p>
+</header>
+
+<div class="card">
+<h2>What You Will Learn</h2>
+<p>✅ How to make websites like this<br>✅ How to host on GitHub FREE<br>✅ How to add M-Pesa payments<br>✅ How to trade & build portfolio</p>
+<div class="price">
+<h2>Full Course Access: KES 1000 Only</h2>
+<p>One-time payment - Lifetime access + WhatsApp support</p>
+</div>
+</div>
+
+<div class="card mpesa">
+<h2>📱 How to Pay - M-Pesa</h2>
+<p><b>Go to M-Pesa:</b></p>
+<p>Lipa na M-Pesa > Buy Goods > Till Number</p>
+<h1 style="color:#1565c0">Till: 123456</h1>
+<p><b>OR Send Money:</b><br>Phone: <b>0788245106 - Willison Borura</b><br>Amount: <b>1000</b></p>
+<p style="font-size:13px">After paying, save M-Pesa message code e.g. QGH7...</p>
+
+<h3>Step 2: Confirm Payment</h3>
+<form onsubmit="return sendWhatsApp()">
+<input id="name" placeholder="Your Full Name" required>
+<input id="phone" placeholder="Your M-Pesa Phone Number" required>
+<input id="code" placeholder="M-Pesa Code e.g. QGH7..." required>
+<button class="btn" type="submit">I Have Paid - Send Proof on WhatsApp</button>
+</form>
+</div>
+
+<div class="card">
+<h2>After Payment You Get:</h2>
+<p>🔓 Full video lessons<br>🔓 All HTML codes<br>🔓 Private WhatsApp group<br>🔓 Certificate</p>
+<a class="btn btn2" href="https://wa.me/254788245106?text=Hello%20Willison%2C%20I%20want%20to%20join%20coding%20class">Ask Question on WhatsApp</a>
+</div>
+
+<div class="card" style="text-align:center;font-size:13px;color:gray">
+© 2026 Willison Coding Hub | Eldoret, Kenya | This is a private coding class - not Kisii University official
+</div>
+
+<script>
+function sendWhatsApp(){
+let n=document.getElementById('name').value;
+let p=document.getElementById('phone').value;
+let c=document.getElementById('code').value;
+let msg=`Hello Willison, I paid for CODING CLASS. Name: ${n}, Phone: ${p}, M-Pesa Code: ${c}, Amount: 1000. Please verify and give me full access.`;
+window.open(`https://wa.me/254788245106?text=${encodeURIComponent(msg)}`);
+return false;
+}
+</script>
+
+</body>
+  </html>
